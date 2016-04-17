@@ -1,0 +1,14 @@
+(1) Explain what you did in order to tune for performance of your balance()
+    function
+
+(2) Which instructions are pipelined and which instructions are not? explain
+
+(3) How many fixed-point unit does your processor have?
+
+(4) How many of them know how to add?
+
+(5) How many of them know how to divide?
+
+(6) How many of them know how to multiply?
+
+(7) How many load units does your processor have?
