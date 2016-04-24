@@ -96,7 +96,7 @@ int main(int argc, char* argv[]) {
 
     printf("freq = %fGHz, cycle_time = %fns\n",freqGHz,cycleNS);
 
-    one("independent add instructions",indepAdds, cycleNS);
+    /*one("independent add instructions",indepAdds, cycleNS);
     one("dependent add instructions",depAdds, cycleNS);
 
     one("independent loads instructions",indepLoads, cycleNS);
@@ -110,7 +110,7 @@ int main(int argc, char* argv[]) {
 
     one("unconditional jumps",uncond, cycleNS);
     one("conditional taken",condTaken, cycleNS);
-    one("conditional not taken",condNotTaken, cycleNS);
+    one("conditional not taken",condNotTaken, cycleNS);*/
 
     int c1 = 0;
     for (int i=0; i<N; i++) {
