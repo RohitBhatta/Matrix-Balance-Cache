@@ -1,3 +1,6 @@
+Citations:
+Balazs explained to me what the point of the first part of benchmarking was. I understood that it was to determine the efficiency of different x86 Assembly instructions. He also told me that div was special in that rdx was used. I discussed possible matrix algorithms with Alex Dai and Alex You, and how we could use blocks of 32 to optimize the cache storage to reduce the number of cycles per comparison. Together, we found out that there were special cases in which the matrix lenght might not be divisible by our block size (32), so I added different for loops that would take care of this. Me and joseph talked about how we could measure the efficiency of dependent loads. I got the original idea of using block sizes to use the cache efficiently from stack overflow where someone was trying to find an algorithm to transpose a matrix.
+
 (1) Explain what you did in order to tune for performance of your balance()
     function
 
