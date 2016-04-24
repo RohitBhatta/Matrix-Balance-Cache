@@ -4,7 +4,13 @@ Balazs explained to me what the point of the first part of benchmarking was. I u
 (1) Explain what you did in order to tune for performance of your balance()
     function
 
+What I did to improve the peformance of the balance() function was to read in values in chunks of 32. This way we would optimize the use of the cache since the block size is 32. We would only have to fetch from memory once every 32 times as long as the matrix length was divisible by 32. This compromised of 4 for loops and making square blocks of length 32 x 32 to reduce the number of cycles per comparison. There are 3 edge cases: the diagonal, the right margin, and the bottom margin. We have a special case for the diagonal because we are going in square blocks, and a square block right next to the diagonal will overlap into the bottom triangular matrix and double count some values. To avoid this, we only traverse the upper triangular by going in triangles when we are 32 elements away from the diagonal. The right margin is a special case because the number of columns in the matrix might not be divisible by 32. We have to account for the remainder of the columns by using the naive algorithm to calculate the balance. The same goes for the bottom margin except it is for rows. The basic blocks, and the 3 special cases constitute the whole upper triangular matrix, which is what my original naive solution covers. The only difference is the way in which the elements are accessed and compared.
+
+
 (2) Which instructions are pipelined and which instructions are not? explain
+
+All the instructions are pipelined. Even the dependent ones are pipelined. The reason the dependent instructions are slower than the independent ones is that it relies on forwarding to retrieve some of its values and it may stop the pipeline depending on the immplementation. However, similar to our projects p9 and p10, all instructions are pipelined.
+
 
 (3) How many fixed-point unit does your processor have?
 
