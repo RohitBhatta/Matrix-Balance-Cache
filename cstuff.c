@@ -10,14 +10,6 @@
 // Feel free to move it to sstuff.S
 int balance() {
     int count = 0;
-    /*for (int r = 0; r < N; r++) {
-        for (int c = r + 1; c < N; c++) {
-            if (matrix[r][c] == matrix[c][r]) {
-                count++;
-            }
-        }
-    }*/
-
     int bound = N - (N % 32);
 
     //Diagonal

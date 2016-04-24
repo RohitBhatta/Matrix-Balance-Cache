@@ -16,8 +16,17 @@ All the instructions are pipelined. Even the dependent ones are pipelined. The r
 
 (4) How many of them know how to add?
 
+The number of fixed-point units that know how to add is the time it takes for the independent add divided by the dependent add. This is 3.374/1.111 ~= 3.
+
+
 (5) How many of them know how to divide?
 
+The number of fixed-point units that know how to divide is the time it takes for the independent add divided by the dependent add. This is 0.049/0.034 = 1.5 which rounds up to 2.
+
+
 (6) How many of them know how to multiply?
+
+The number of fixed-point units that know how to multiply is the time it takes for the independent multiply divided by the dependent multiply. This is 1.108/0.371 ~= 3.
+
 
 (7) How many load units does your processor have?
