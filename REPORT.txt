@@ -34,4 +34,4 @@ The number of fixed-point units that know how to multiply is the time it takes f
 
 (7) How many load units does your processor have?
 
-6 load units.
+4 load units.
