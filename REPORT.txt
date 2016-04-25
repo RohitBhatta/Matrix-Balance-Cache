@@ -1,5 +1,5 @@
 Citations:
-Balazs explained to me what the point of the first part of benchmarking was. I understood that it was to determine the efficiency of different x86 Assembly instructions. He also told me that div was special in that rdx was used. I discussed possible matrix algorithms with Alex Dai and Alex You, and how we could use blocks of 32 to optimize the cache storage to reduce the number of cycles per comparison. Together, we found out that there were special cases in which the matrix lenght might not be divisible by our block size (32), so I added different for loops that would take care of this. Me and joseph talked about how we could measure the efficiency of dependent loads. I got the original idea of using block sizes to use the cache efficiently from stack overflow where someone was trying to find an algorithm to transpose a matrix.
+Balazs explained to me what the point of the first part of benchmarking was. I understood that it was to determine the efficiency of different x86 Assembly instructions. He also told me that div was special in that rdx was used. I discussed possible matrix algorithms with Alex Dai and Alex You, and how we could use blocks of 32 to optimize the cache storage to reduce the number of cycles per comparison. Together, we found out that there were special cases in which the matrix lenght might not be divisible by our block size (32), so I added different for loops that would take care of this. Me and Joseph talked about how we could measure the efficiency of dependent loads. I got the original idea of using block sizes to use the cache efficiently from stack overflow where someone was trying to find an algorithm to transpose a matrix.
 
 (1) Explain what you did in order to tune for performance of your balance()
     function
@@ -13,6 +13,9 @@ All the instructions are pipelined. Even the dependent ones are pipelined. The r
 
 
 (3) How many fixed-point unit does your processor have?
+
+Fixed-point units are ALUs. Our Intel Haswell i7 processor has 8 ALUs.
+
 
 (4) How many of them know how to add?
 
@@ -30,3 +33,5 @@ The number of fixed-point units that know how to multiply is the time it takes f
 
 
 (7) How many load units does your processor have?
+
+6 load units.
